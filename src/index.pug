@@ -11,8 +11,10 @@ html(lang="ja")
                 div ロゴ
                 nav 
                     ul 
-                        each val in [1, 2, 3, 4]
-                            li= 'リスト' + val
+                        //- each val in [1, 2, 3, 4]
+                        //-     li= 'リスト' + val
+                        - for (var order = 1; order <= 4; order++)
+                            li= 'リスト' + order
             #main 
                 h1 メインタイトル
             aside 

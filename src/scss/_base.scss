@@ -1,0 +1,16 @@
+/**
+ * デフォルトCSS
+ * リセットCSS ・・・HTMLタグに応じてブラウザがデフォルトで適用するCSSをほぼ全て無効化する
+ * ノーマライズCSS ・・・ ブラウザごとのデフォルトで適用するCSSの差異を無くす
+ * サニタイズCSS ・・・ノーマライズCSS + 前提としてよく利用されるCSSを追加
+ */
+//  リセット
+// @import "./default/reset";
+//  ノーマライズ
+// @import "./default/normalize";
+//  サニタイズ
+@import "./default/sanitize";
+
+ul {
+    list-style-type: none;
+}

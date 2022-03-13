@@ -1,0 +1,61 @@
+
+// 横幅---------------------------------------
+$wrap-width: 725px; // 全体
+$main-width: 562px; // メイン
+
+// 余白---------------------------------------
+$side-margin: 20px; // 横方向
+
+// テスト用------------------------------------
+$test-layout: true; // レイアウトの可視化
+
+// テスト時にコンテンツに色をつけてレイアウトを可視化
+@mixin layoutTest($color) {
+    @if $test-layout {
+        background-color: rgba($color, 0.6);
+    }
+}
+
+// ラッパー - ページの構成要素全体を囲う
+#wrapper {
+    width: $wrap-width;
+    margin: 10px auto;
+    border: 1px solid darkgray;
+}
+
+// ヘッダー - サイトタイトルとサイトナビゲーションを設置
+header {
+    @include layoutTest(red);
+    nav {
+        ul {
+            li {
+                @include layoutTest(brown);
+                float: left;
+            }
+        }
+    }
+}
+
+// メイン - ページのメインコンテンツ
+#main {
+    @include layoutTest(blue);
+    float: left;
+    width: $main-width;
+    margin: 0 $side-margin;
+}
+
+// サイド
+aside {
+    @include layoutTest(green);
+    float: right;
+    width: ($wrap-width - $main-width) / ($side-margin * 4);
+    margin: 0 $side-margin;
+}
+
+// フッター
+footer {
+    @include layoutTest(yellow);
+    text-align: center;
+    clear: both;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,21 @@
+doctype html
+html(lang="ja")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title pugとsass(scss)を学習する
+        link(rel='stylesheet', href="css/style.css")
+    body 
+        #wrapper
+            header 
+                div ロゴ
+                nav 
+                    ul 
+                        each val in [1, 2, 3, 4]
+                            li= 'リスト' + val
+            #main 
+                h1 メインタイトル
+            aside 
+                p サイドバー
+            footer 
+                p <small>&copy;コピーライト</small>
